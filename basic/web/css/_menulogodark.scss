@@ -1,0 +1,26 @@
+/* MENU STYLE */
+.logo-big { color:white; }
+.sec_head {border-top:1px solid #333;}
+.menu { 
+	// border-top: none;
+	a { 
+		color:white;
+	}
+	.dropdown-menu {
+		background: none;
+		color:white;
+		text-align: left;
+		padding-right: 10px;
+		border-right: 1px solid $light_grey;
+		li a {text-transform: none!important;}
+	}
+
+}
+.navbar-toggle .icon-bar {
+	background:white
+}
+.in {
+    width: 100%;
+    background: #222;
+}
+

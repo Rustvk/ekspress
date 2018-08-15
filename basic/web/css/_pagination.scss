@@ -1,0 +1,23 @@
+.pagination_block {
+	text-align: center;
+	.pagination {
+		li {
+			a {	color: $text_grey; }
+		&:hover a{
+			color:$red;
+			}
+		}
+		.active {
+			&:hover a{	
+				color:white;
+				background: $text_grey;
+				border-color: $text_grey;
+			}
+			a {
+				color:white;
+				background: $text_grey;
+				border-color: $text_grey;
+			}
+		}
+	}
+}

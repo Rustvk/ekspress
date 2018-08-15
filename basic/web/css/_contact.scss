@@ -1,0 +1,50 @@
+.contact {
+	.wishlist_page_header {
+		padding-left: 10px;
+	}
+	padding-bottom: 20px;
+	text-align: center;
+	.contact_form {
+		padding: 20px!important;
+		background: rgba(0,0,0,0.04);
+		@include box-shadow(0px, 15px, 20px, -23px, rgba(0,0,0,0.8), false);
+		@include transition(.3s);
+	&:hover {
+		@include box-shadow(0px, 15px, 25px, -17px, rgba(0,0,0,0.4), false);
+	}	
+	}
+	.contact_rows {
+		padding: 20px!important;
+		label {}
+		input {
+			@include border-radius(5px);
+		}
+	}
+}
+.contact_item_block {
+	padding: 20px!important;
+}
+.contact_item {
+	padding: 20px!important;
+	border:1px dashed $light_grey;
+			@include border-radius(5px);
+	// background: rgba(0,0,0,0.02);
+
+	// @include box-shadow(0px, 15px, 20px, -23px, rgba(0,0,0,0.8), false);
+	@include transition(.3s);
+	height: 200px;
+	&:hover {
+		// @include box-shadow(0px, 15px, 25px, -17px, rgba(0,0,0,0.4), false);
+	}
+	i {
+		font-size: 30px;
+		display: block;
+		padding: 20px;
+	}
+
+}
+
+.contact_block {
+	text-align: left;
+	margin:0 auto;
+}

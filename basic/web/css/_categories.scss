@@ -1,0 +1,236 @@
+/*	TOP HEADER WITH IMAGE */
+.category_header { 				position: relative;
+								margin-bottom: 30px;
+		p {						font-weight: 100; }
+ }
+.page_header {
+								padding:20px 10px;
+	.h3 {						margin-top: 0px;}
+								
+}
+.img_cat_back { 				width: 100%;
+								text-align: center;
+								overflow: hidden;
+								height: 200px;
+    							display: flex;
+    							justify-content: center;	
+	img {						// max-width:100%;
+								width: auto;
+								display: block;
+								height: 200px;
+								margin:0 auto;
+								// align-self:center;
+	}
+	.color_cat_img_cover {		position: absolute;
+								top:0;
+								width: 100%;
+								height: 100%;
+								left: 0%;
+								background: rgba(0,0,0,0.7);
+	}
+}	
+.category_text_header {			position: absolute;
+								top:40px;
+								text-align: center;
+								left:50%;
+								@include hcenter;
+								width: 90%;
+								color: white;
+	.pageheaderleft {
+		span {					font-size: 16px;}
+	}
+}
+
+/* LEFT CATEGORIES NAV */
+.cat_nav {						
+								position: relative!important;
+								padding-left: 10px;
+	h2 {						margin-left: 15px;}
+	.catalog {					margin-top: 20px; }
+	ul {						
+		li {					
+								float: none;
+			a { 				display: inline-block;
+								color: $cat_color;
+								font-weight: 400;
+								font-size: 14px;
+								@include border-radius(4px);
+				span {
+					i {	
+								font-size: 10px!important;
+								line-height: inherit;
+					}
+				}
+				&:hover {
+									color: $red;
+									text-decoration: none;
+
+				}
+			}
+			ul li a {
+								position: relative;
+						    	display: block;
+    							padding: 10px 15px;
+			}			
+
+		}
+		.active {
+			>a {
+								background:none!important;
+								border:1px solid $red;
+								color: $red!important;
+			}
+		}
+		.active {
+			.cat_adm {
+								background:none!important;
+								border:none!important;
+								color: inherit!important;
+			}
+		}		
+	}
+}
+
+.search_page .cat_nav {
+	ul {
+								margin-top: 0px;
+								text-align: left;
+	}
+	li {
+								margin-top: 5px;
+								display: inline-block;
+		a {
+								border:1px solid $light_grey;
+		}
+		&:hover {
+			a {				
+								border:1px solid $red;
+			}
+		}		
+	}
+}
+.plus_cat {
+	position: absolute;
+	top:8px;
+	right: 0px;
+	color: $light_grey;
+	padding: 4px 7px;
+	cursor: pointer;
+	font-size: 12px;
+	&:hover {
+		border:1px solid $text_grey;
+		padding: 3px 6px;
+		@include border-radius(3px);
+		color:$text_grey;
+	}
+}
+	.cat_nav ul li {	
+		ul {
+			border-left: 1px solid $light_grey;
+			margin-left: 15px;
+   			padding-left: 20px;
+
+		}		
+		ul li{
+			height: 0;
+			overflow: hidden;
+			@include transition(.2s);
+		}
+	}
+	.cat_nav ul .show_sub_cat{
+		ul {
+			margin-top: 10px;
+   			margin-bottom: 10px;
+		}
+
+		li{
+			height: 44px;
+		}
+	}
+	.cat_nav ul li {
+		.sub_cat {
+			height: 44px;
+		}
+		.sub_cat + li {
+			height: 44px;
+		}
+		.sub_cat ~ li {
+			height: 44px;
+		}		
+	}
+@media screen and (min-width: 1200px) {
+	.cat_nav {					text-align: left;
+		ul {
+			li {
+								display: block;
+			}
+		}
+	}
+}
+
+
+	.nav_menu {
+		position: fixed;
+		left: -100%;
+		background: white;
+		width: 300px;
+		top:0;
+		z-index: 5;
+		padding: 20px 40px;
+		@include transition(.3s);
+		height: 100%;
+	}
+	.close_nav {
+		position: absolute;
+		top:20px;
+		right:20px;
+		cursor: pointer;
+	}
+	.show_cats_button {
+		@include border-radius(20px);
+		display: inline-block;
+		padding: 10px 15px;
+		margin-left: 10px;
+		background: $green;
+		color:white;
+		cursor: pointer;
+	}
+	.show_nav_menu {
+		left: 0px;
+	}
+	.category_header {
+		.category_text_header {
+			top:10px;
+			h1 {
+				font-size: 24px;
+			}
+		}
+	}
+@media screen and (min-width: 992px) {
+	.show_cats_button {
+		border:none;
+	}
+	.nav_menu {
+		position: relative;
+		left: 0;
+		width: auto;
+		z-index: 0;
+		padding: 0;
+		padding-bottom: 40px;
+	}
+		// background: white;
+	.close_nav {
+		display: none;
+	}
+	.show_cats_button {
+		display: none;
+	}
+	.category_header {
+		.category_text_header {
+			top:40px;
+			h1 {
+				font-size: 36px;
+			}
+		}
+	}
+}

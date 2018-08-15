@@ -1,0 +1,73 @@
+.breadcrumb > li + li:before {
+                                content: "\f105"!important;
+                                color: $main_grey!important;
+                                font: normal normal normal 14px/1 FontAwesome;
+}
+.breadcrumb {
+                            	width: 100%;
+    li a {
+                            	// color: $main_grey;
+                            	padding-bottom: 1px;
+                                // border-bottom: 1px solid $main_grey;
+                                padding: 5px 15px;
+                                @include border-radius(5px);
+		&:hover {
+                    			// color: $red;
+
+		}
+
+    }
+}
+
+.category_text_header {
+    .breadcrumb {               background-color:rgba(255,255,255,0)!important;
+        li a {
+                                color:white;
+                                // border-bottom: 1px solid white;
+                                border: 1px solid rgba(255,255,255,0.4);
+        &:hover {               border-bottom: 1px solid white;
+                                background: white;
+                                color:$main_grey;   }
+
+    }
+
+    .active {                   color:white; }
+    }
+    .breadcrumb > li + li:before {
+                                content: "\f105"!important;
+                                color: white!important;
+                                font: normal normal normal 14px/1 FontAwesome;
+    }
+}
+
+.product, .album, .vacancy {
+    .breadcrumb {               background: none!important;
+                                padding: 10px;
+                                margin-left:0!important;
+                                margin-right:0!important;
+        li a {
+                                color:$main_grey;
+                                border:none;
+                                padding: 5px;
+
+        }
+    }
+    .breadcrumb .active {       color:$main_grey; }
+    .breadcrumb > li + li:before {
+                                content: "\f105"!important;
+                                color: $main_grey!important;
+                                font: normal normal normal 14px/1 FontAwesome;
+    }
+}
+
+.album, .vacancy { 
+    .breadcrumb {
+        padding: 0;
+        margin-top: 30px;
+        li a {
+            border:1px solid $light_grey;
+            padding: 10px 15px;
+        }
+    }
+        
+}

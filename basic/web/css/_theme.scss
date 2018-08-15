@@ -1,0 +1,50 @@
+/* LOGO STYLE */				/* VALUE */
+.logo-big { 					color:$main_grey; }
+
+/* MENU STYLE */
+
+// .sec_head {					border-top:1px solid white;}
+.menu { li { a { 				color:$main_grey; } } }
+.navbar-toggle .icon-bar { 		background:$main_grey; }
+// .in {							background: white; }
+.header {
+	 							border-bottom: 1px solid #efefef;
+}
+.menu_container {
+								background: white;
+								// border-top: 1px solid white!important;
+}
+// .dropdown-menu {				@include box-shadow(0, 0, 10px, 0px, rgba(0,0,0,0.3), false);
+// 								@include border-radius(5px);
+// 								background: white!important;}
+
+/* SEARCH STYLE */
+.search_icon {					color:$main_grey*2; }
+.search_input {					color:$text_grey; 
+}
+
+/* WISHLIST */
+.wishlist_count { 				background: #fff;
+								border:1px solid $light_grey;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color:$orange!important;	
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: none!important;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+	background: none!important;
+}
+.menu .dropdown-menu {
+	border-left: 0px!important;
+	border-top: 0px!important;
+	border-bottom: 0px!important;
+}
+.menu_container {
+	padding-left: 15px!important;
+	padding-right: 15px!important;
+}

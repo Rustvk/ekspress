@@ -1,0 +1,84 @@
+.logo-small {
+	font-size: 10px;
+	color: $orange;
+	font-weight: 400;
+	margin:0;
+	text-shadow:none;
+}
+.logo-big {
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.menu {
+	li {
+		padding: 15px 10px;
+	}
+	.active>a {
+		color: $orange;
+		border-bottom: 1px solid $orange;
+		padding-bottom:5px!important;
+		background: none!important;
+		border-bottom:1px solid $orange!important;
+	}
+	a { 
+		padding:0!important;
+		font-weight: 900;
+		font-size: 14px;
+		text-transform: uppercase;
+		&:hover {
+			color:$orange;
+			text-decoration: underline;
+		}
+	}
+	.dropdown li { padding-top: 5px; padding-bottom: 5px;}
+	.dropdown > a:hover,
+	.dropdown > a:focus {
+	/*  border-bottom: 1px solid white;
+	  border-color: #337ab7;*/
+	  color:$orange;
+	}
+	.dropdown-menu {
+		// background: none;
+		color:white;
+		text-align: left;
+		padding-right: 10px;
+		border-right: 1px solid $light_grey;
+		li a {text-transform: none!important;
+		}
+	}
+
+}
+.navbar-toggle .icon-bar {
+}
+.in {
+    width: 100%;
+	border-top: none!important;
+}
+.navbar-collapse, .collapse {
+	position: absolute!important;
+}
+.menu_container {
+	position: absolute!important;
+	width: 100%;
+	z-index: 1;
+	-webkit-box-shadow: 0px 0 20px rgba(0, 0, 0, 0.3)!important;	
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)!important;	
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)!important;	
+}
+
+@media screen and (min-width: 768px) {
+	.menu_container {
+	background: none!important;
+	box-shadow: none!important;
+
+	position: inherit;
+    width: auto!important;
+	border-top: none!important;
+
+	}
+	.navbar-collapse, .collapse {
+		position: relative!important;
+	}	
+}
+

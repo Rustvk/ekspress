@@ -1,0 +1,50 @@
+/* LOGO STYLE */				/* COLORS*/
+.logo-big { 					color:white; }
+
+/* MENU STYLE */				
+.sec_head {						border-top:1px solid #333;
+								min-height: 52px;
+}
+.menu { li { a { 				color:white; } } }
+.navbar-toggle .icon-bar { 		background:white }
+.in {							background: rgba(0,0,0,0.2); }
+.menu_container {
+								background: #222;
+								border-top: 1px solid #222!important;
+}
+
+/* SEARCH STYLE */
+.search_icon {					color:white;}
+.search_input {					color:white; 
+}
+
+/* WISHLIST */
+.wishlist_count { 				background: #fff;
+								border:1px solid white;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color:$orange!important;	
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: none!important;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+	background: none!important;
+}
+.menu .dropdown-menu {
+	background: none!important;
+	border-radius: 0px!important;
+	border-left: 0px!important;
+	border-top: 0px!important;
+	border-bottom: 0px!important;
+}
+
+@media screen and (min-width: 768px) {
+	.sec_head {						
+									height: 52px;
+	}
+}

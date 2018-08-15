@@ -1,0 +1,500 @@
+// @import '../../css/fonts';
+@import '../../css/var';
+@import '../../css/mixins';
+@import '../../css/buttons';
+@import '../../css/typography';
+@import '../../css/footer';
+.admhome {
+	color:white!important;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0px 10px;
+	&:hover, &:active, &:focus {
+		color:white;
+		background: #367fa9;
+	}	
+}
+.alert-success {
+	background: $admin_green!important;
+	border-color: #7fa953!important;
+}
+.content-header>.breadcrumb {
+	float: none;
+	right: initial;
+	position: relative;
+}
+.form-group.has-success label {
+    color: $admin_green/2;
+}
+.form-group.has-success .form-control, .form-group.has-success .input-group-addon {
+    border-color: $admin_green;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header {
+	height: auto;
+}
+
+label {
+	font-weight: normal;	    
+}
+
+.btn-default {
+	border-color: $text_grey;
+}
+.show_ingred {
+	width: auto;
+	height: auto;
+	display: inline-block;
+	margin: 0px 0 15px 0;
+	&:hover {
+		border-color: #00a65a;
+	}
+}
+
+.ingred {
+	position: fixed;
+	top:0px;
+	right: -400px;
+	width: auto;
+	background: white;
+	height: 100%;
+	width: 300px;
+	z-index:1031;
+	transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+
+	.control-label {
+		font-size: 20px;
+		background: rgba(0,0,0,0.02);
+		width: 100%;
+		padding: 20px;
+		margin:0;
+	}
+	.checkingred {
+		height: 100%;
+		overflow-y:auto;
+		height: 80%;
+		position: absolute;
+		width: 100%;		
+		label {
+			display: block;
+			height: 40px;
+			border-bottom: 1px dashed $light_grey;
+			padding: 5px 0;
+		}
+		padding: 10px 20px;
+	}
+	.close_ingred {
+		position: absolute;
+		top:10px;
+		right: 10px;
+		font-size: 20px;
+		/*z-index:*/
+		cursor: pointer;
+	}
+	.top, .bottom {
+		position: absolute;
+	    top: 30px;
+	    text-align: center;
+	    margin: 0 auto;
+	    /* left: 50%; */
+	    font-size: 20px;
+	    background: rgba(0,0,0,0.06);
+	    display: block;
+	    width: 100%;
+	    padding: 10px;
+	    cursor: pointer;
+	}
+	.bottom {
+		position: relative;
+		bottom: 0;
+		top: initial;
+	}
+	.footer_ing {
+		width: 100%;
+	    background: rgba(0, 0, 0, 0.04);
+        height: 61px;
+        position: absolute;
+        bottom: 0;
+	}
+	.done_ing {
+		margin: 0 auto;
+	    text-align: center;
+	    display: inline-block;
+	    left: 20px;
+	    position: relative;
+	    width: 150px;
+	    /*margin-left: -75px;*/
+	    margin-top: 15px;
+	}
+}
+.ingred_sh {
+	right: 0;
+}
+.overlay {
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1030;
+	display: none;
+}
+
+.checkingred {
+	label>input {
+	  vertical-align: top;
+	  margin: 0 3px 0 0;
+	  margin-left: 30px;
+	  width: 17px;
+	  height: 0px;
+	}
+	label {
+	  cursor: pointer;
+	}
+
+}
+	label>input {
+	display: inline-block;
+	height: 0;
+	vertical-align: top;
+	}
+	label>input:not(checked) {
+	  position: absolute;
+	}
+	label>input:not(checked) {
+	  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+	  padding: 0 0 0 160px; /* оставляем слева от label место под псевдочекбокс */
+	}	
+	label>input:before {
+	  content: '';
+	  position: absolute;
+	  top: -4px;
+	  left: -40px;
+	  width: 50px;
+	  height: 26px;
+	  border-radius: 13px;
+	  background: #CDD1DA;
+	  cursor: pointer;
+	  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	}	
+	label>input:after {
+	  content: '';
+	  position: absolute;
+	  cursor: pointer;
+
+	  top: -2px;
+	  left: -38px;
+	  width: 22px;
+	  height: 22px;
+	  border-radius: 10px;
+	  background: #FFF;
+	  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+	}	
+	/* Меняем фон чекбокса, когда он включен. */
+	label>input:checked:before,  {
+	  background: #9FD468;
+	}
+	/* Сдвигаем переключатель чекбокса, когда он включен. */
+	label>input:checked:after {
+	  left: -14px;
+	}
+	/* Показываем получение фокуса. */
+	label>input:focus:before {
+	  /*box-shadow: 0 0 0 3px rgba(255,255,0,.5);*/
+	}	
+.is_boolean {
+	margin-left: 40px!important;
+}
+
+.view_ingredient {
+	display: inline-block;
+	padding: 5px; 
+	border: 1px solid $text_grey;
+	@include border-radius(5px);
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.alert {
+	margin-top: 20px;
+}
+.daughter {
+	border:1px solid $light_grey;
+	padding: 10px!important;
+	margin:10px!important;
+	margin-left: 0px!important;
+	@include border-radius(5px);
+}
+.delimg, .delimglunch {
+	margin-bottom: 5px;
+	display: block;
+}
+.remove_daughter {
+	position: absolute;
+	top: 30px;
+	right: 35px;
+}
+.daughter_block {
+	padding-left: 0px;
+}
+.kv-editable-value {
+	text-align: left!important;
+}
+.btn-success, .kv-editable-submit {
+	background: #9FD468!important;
+	border-color: #9FD468!important;
+	&:hover {
+		background: #9FD468*0.9!important;
+		border-color: #9FD468*0.85!important;
+	}
+}
+
+/* LUNCH */
+.page {
+	position: relative;
+	height: 100%;
+}
+// .lunchdate, .lunchagree {
+	// font-size: 12pt;
+// }
+// .lunchmenupage {
+	// padding: 20px;
+	// background: white;
+	// width: 100%;
+	// height: 100%;
+	// display: block;
+	// // position: absolute;
+	// bottom:0;
+	// top:0;
+	// color:black;
+// }
+// .lunchmenu {
+// 	border:5px solid black;
+// 	padding: 20px;
+// 	h1 {
+// 		font-size: 32pt;
+// 	}
+// 	h3 {
+// 		font-size: 20pt;
+// 		font-weight: bold;
+// 	}
+// 	h3, h1 {
+// 		text-align: center;
+// 	}
+// }
+// .lunchdate {
+// 	text-decoration: underline;
+// }
+// .lunchproduct {
+// 	padding: 0 50px;
+// 	.name { font-size: 16pt; }
+// 	.weight { font-size: 11pt; }
+// 	.price { font-size: 16pt;  font-weight: bold; }
+// }
+
+.printlunch {
+	margin-bottom:20px;
+}
+
+.main_public {
+	// position: absolute;
+	// top:135px;
+	// float: right;
+	// right: 20px;
+	// margin-top: -45px;
+}
+
+.back_img {
+	padding: 0;
+}
+
+.hbitem {
+	padding: 10px 10px 0px 10px;
+	// margin-bottom: 10px;
+	border-bottom: 1px dashed $light_grey;
+}
+.hbitem.red{
+	background: #9FD468;
+	color:white;
+}
+.hbitem:last-child {
+	border-bottom: 0px;
+}
+
+
+.checkprodtext {
+	display: none;
+	padding:0;
+	margin:0;
+	border:0px;
+	@include transition(.4s);
+	width: 0px;
+	margin-left: 20px;
+	border-bottom: 1px solid $light_grey;
+}
+
+.checkproducts {
+	display: none;
+	margin-bottom: 40px;
+
+	input[type="checkbox"] {
+		height: 0;
+		width: 0;
+		display: none;
+		margin:0;
+		padding: 0;
+	}
+	label {
+		padding: 10px 10px 10px 10px;
+		line-height: 1;
+		position: relative;
+		width: 300px;
+		// margin-left:0;
+		// margin-right: 0px;
+		cursor: pointer;
+		@include transition(.2s);
+		// @include border-radius(5px);
+		&:hover {
+			background: rgba(0,0,0,0.05);
+		}
+	}
+	input[type="checkbox"]:checked + label {
+	    border: 1px solid #aed08c;
+		@include transition(.2s);
+		padding: 10px 10px 10px 40px;
+	    // color:white;
+	}
+	input[type="checkbox"]:checked ~ .checkprodtext {
+		display: block;
+		width: 200px;
+	}
+	input[type="checkbox"]:checked + label:before {
+		content: "\f00c";
+  		font-family: 'FontAwesome';
+		background: #aed08c;
+		@include transition(.2s);
+
+		color:white;
+		padding: 0 10px;
+		height: 100%;
+		line-height: 2.2;
+		left: 0;
+		top:0;
+		position: absolute;
+	}
+}
+
+.checkcategories, .checkproducts {
+	list-style: none;
+	padding: 0;
+}
+.checkcategories {
+	margin-bottom: 10px;
+	>li {
+		cursor: pointer;
+		padding: 5px;
+		border-bottom: 1px dashed $light_grey;
+	}
+}
+.checkproducts  {
+	border-left: 1px solid $light_grey;
+	padding-left: 10px;
+	li {
+		display: block;
+	}
+}
+.orderitems {
+    position: fixed;
+    background: white;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    z-index: 99999;
+    padding: 20px 20px;
+    bottom: 20px;
+    display: none;
+    overflow-y: auto;
+    h1 {
+    	font-size: 24px;
+    }
+}
+.close_orderitems {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+	font-size: 24px;
+	border: 1px solid rgba(0,0,0,0);
+	padding: 10px 15px;
+	text-align: right;
+	span {
+		font-size: 12px;
+		display: block;
+
+	}
+}
+.savecheckproducts.btn-default {
+	background: white!important;
+}
+.savecheckproducts {
+	position: fixed;
+	bottom:50px;
+	right: 110px;
+	@include transition(.2s);
+}
+  .order_name {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .order_name {
+  display: inline-block;
+}
+	.checkprodtext { 
+		display: inline-block;
+	}
+	.checkproducts {
+		input[type="checkbox"]:checked ~ .checkprodtext {
+			display: inline-block;
+			height: auto;
+		}
+	}
+.orderitems {
+    padding: 50px 100px;
+}
+
+.close_orderitems {
+	right: 80px;
+	top: 50px;
+}
+}
+
+
+.prod_img_button {
+												position: relative;
+	.product_image_btn {
+		i {
+												font-size: 30px;
+												color:white;
+												left:0;
+												top:0;
+												position: absolute;
+												cursor: pointer;
+												opacity: 0;
+												width: 266px;
+												height: 100%;
+												text-align: center;
+												padding-top: 75px;
+												padding-left: 5px;
+												background: rgba(0,0,0,0.2);
+		}
+	}
+	&:hover {
+		.product_image_btn i {
+												opacity: 1;
+		}
+	}
+}
