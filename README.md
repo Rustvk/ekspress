@@ -1,6 +1,6 @@
 # Restaurant website
 
-## Old commercial [Website](http://rustvk.beget.tech/)
+## [Technical copy domain](http://rustvk.beget.tech/)
 
 Realization of cart, search logic, authorization, website admin panel, gallery, mobile adaptability
 
