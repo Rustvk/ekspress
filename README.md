@@ -1,5 +1,6 @@
-<h1>Кафе Экспресс<h1>
-<div>
-  <p>JS, Yii2, Jquery, MySQL</p>
-  <a href="http://rustvk.beget.tech/">Технический домен</a>
-</div>
+<h1 aling="center">Кафе Экспресс<h1>
+<p>Old commercial project website</p>
+
+##JS, Yii2, Jquery, MySQL</p>
+[Website](http://rustvk.beget.tech/)
+
