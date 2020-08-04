@@ -1,4 +1,4 @@
-<h1 aling="center">Cafe website<h1>
+# Restaurant website
 
 ## Old commercial [Website](http://rustvk.beget.tech/)
 
